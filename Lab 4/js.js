@@ -87,3 +87,35 @@ function number (){
 
     
 }
+
+function libre(){
+    document.write("Verificar que 3 lineas puedan formar un triangulo")
+    let l1 = prompt("Ingresa el lado 1") ;
+    let l2 = prompt("Ingresa el ladoT 2") ;
+    let l3 = prompt("Ingresa el lado 3") ;
+    
+    class Triangulo{
+        
+        constructor(l1,l2,l3){
+            this.l1 = l1;
+            this.l2 = l2;
+            this.l3 = l3;
+        }
+        
+        evaluar(){
+            if(l1 == l2 && l2==l3){
+                document.write("Si se puede");
+            }
+            else if((+l1 + +l2>l3) && (+l2 + +l3>l1) && (+l1 + +l3>l2)){
+                document.write("Si se puede") ;
+            }
+            else{
+                document.write("No se puede") ;
+            }
+        }
+    }
+    
+    let tri = new Triangulo(l1,l2,l3) ;
+    tri.evaluar() ;
+    
+}
