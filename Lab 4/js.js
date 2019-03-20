@@ -78,21 +78,12 @@ let size = prompt("Ingresa el tamano del arreglo") ;
     
 }
 
-function number(){
-    let num = prompt("Ingresa el numero")
-    let array = [] ;
-    let stringNum = num.toString() ;
-    let ss=0;
+function number (){
+        let num = prompt("Dame un numero positivo ");
+		let str = num.toString();
+		let x = str.split("").reverse().join("");
+		let result = Number(x);
+		document.write("numero "+result);			
 
-    for( let i=0, size=stringNum.size ; i<size ; i++){
-        array.push(stringNum.charAt(i)) ;
-         document.write(array) ;
-    }
-
-    for( let size=stringNum.size, i =(size-1) ; i!=0 ; i--){
-        ss = array[i] ;
-        document.write(ss)  ;
-        
-    }
     
 }
