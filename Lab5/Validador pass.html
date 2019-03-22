@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      
+      <!-- micss-->
+      <link type="text/css" rel="stylesheet" href="css/css.css"  media="screen,projection"/>
+    </head>
+    
+<body>
+    <header>
+        <div class="card-panel red lighten-1"><h1>Laboratorio 5</h1></div>
+    </header>
+    
+    <div class = "container">
+        <div class="row">
+            <form class="col s12" method="post" action="" onsubmit= "return checkForm(this)" >
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pass1" id="pass1" onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : ''); if(this.checkValidity()) form.pass2.pattern = RegExp.escape(this.value);">
+                  <label for="password">Password(Debe contener al menos 6 letras e incluir mayusculas y minsculas)</label>
+                    <div class="input-field col s12">
+                      <input id="pass" type="password" class="validate" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pass2" id="pass2" onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : '' );">
+                      <label for="pass2">Confirm Password </label>
+                    </div>
+                    <intput type="submit" value="Save changes"><a class="waves-effect waves-light btn">Verificar</a></intput>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js.js"></script>
+ 
+</body>
+    
+</html>
