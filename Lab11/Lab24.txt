@@ -1,0 +1,18 @@
+
+Explica por qué ocurre dicho evento. 
+
+Eso ocurre por que la transaccion nunca termino debido a que no se aplico el commit.
+
+En la segunda sesion si se puede ver porque como ahi se corrio el query si se observa, pero la transaccion sigue corriendo hasta que no se haga un rollback.
+
+Al agregar ROLLBACK y revisar de nuevo la tabla, pude darme cuenta que los registros que se habian creado con la transsaccion ya no exisitian, esto ocurrio gracias a que el rollback cancela todo lo que se hizo en una transaccion.
+
+
+Revisa el contenido de la tabla CLIENTES_BANCA. 
+
+¿Para qué sirve el comando @@ERROR revisa la ayuda en línea? 
+Si no encuentra un error regresa 0. Esto permite tomar la descision de hacer un roll back o un commit.
+¿Qué hace la transacción? 
+La transaccion inserta nuevos clientes en banca y si @@error regresa 0 hace un commit si no hace un rollback.
+¿Hubo alguna modificación en la tabla? Explica qué pasó y por qué. 
+No por que habia una primary key que violaba la regresas de integridad referencial. Cuando se modifica este valor si se crea un commit.
